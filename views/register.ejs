@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<!-- Including Home -->
+<%- include('./partials/head.ejs') %>
+
+<body id="register">
+
+    <!-- Including Navbar -->
+    <%- include('./partials/nav.ejs') %>
+
+    <!-- Main Register Body -->
+    <div class="container-fluid">
+        <div class="register">
+            <div class="col-md-2 col-sm-0"></div>
+            <div class="col-md-8 col-sm-12" id="body">
+                    <style>
+                        .in {
+                            margin-top: -25px !important;
+                            margin-bottom: 15px;
+                        }
+                    </style>
+
+                    <!-- Form For Registering New User -->
+                    <form class="form-signin" action="/registerUser" method="POST">
+                        <h3 style="margin-bottom: 20px; color: black;">Register</h3>
+                        <label for="userName">Username <span class="required">*</span></label><br>
+                        <div class="reg-input">
+                            <input class="in form-control" name="userName" id="userName" type="Text" required />
+                        </div>
+                        <label for="password">Password <span class="required">*</span></label>
+                        <div class="reg-input">
+                            <input class="in form-control" name="password" id="name" type="password" required /><br />
+                        </div>
+                        <label for="email">Business Email <span class="required">*</span></label>
+                        <div class="reg-input">
+                            <input class="in form-control" name="email" id="email" type="email" required /><br />
+                        </div>
+                        <label for="groupName">Group Name <span class="required">*</span></label>
+                        <div class="reg-input">
+                            <input class="in form-control" name="groupName" id="groupName" type="text" /><br />
+                        </div>
+
+                        <!-- Button to submit value of New User -->
+                        <button type="submit" class="btn" id="registerBtn">Register</button><br />
+
+                        <!-- Redirect to Login -->
+                        <a href="login" style="color: dimgrey; text-decoration: none;" id="back">Already have account? --Login--</a>
+                    </form>
+            </div>
+            <div class="col-md-2 col-sm-0"></div>
+        </div>
+    </div>
+</body>
+</html>

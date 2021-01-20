@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+/* Login and Register */
+#login {
+  background-color: lightgreen;
+  background-image: url("loginPic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#register {
+  background-color: burlywood;
+  background-image: url("register.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+#body {
+  font-family: Georgia;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login form,
+.register form {
+  background-color: #ffffff;
+  border: hidden;
+  padding: 40px 30px;
+  border-radius: 15px;
+  opacity: 0.97;
+}
+
+.login form {
+  width: 25vw;
+}
+
+.register form {
+  width: 25vw;
+}
+
+.register input {
+  margin: 20px 0;
+}
+
+br {
+  line-height: 5px;
+}
+
+@media only screen and (max-width: 700px) {
+  form {
+    width: 80%;
+  }
+}
+
+.required {
+  color: red;
+}
+
+.login .btn,
+.register .btn {
+  width: 100%;
+  border-radius: 25px;
+  opacity: 1;
+  color: aliceblue !important;
+  font: bold 17px Georgia !important;
+  border: solid thin !important;
+  background-color: darkorange !important;
+  border-color: orangered !important;
+}
+
+.login .btn:hover,
+.register .btn:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(128, 128, 128, 0.5) 4px 2px;
+}
+
+.login .btn:active,
+.register .btn:active {
+  transform: scale(1);
+}
+
+#back {
+  color: darkblue;
+  font-size: 12px;
+  float: left;
+}
+
+label {
+  font: bold 20px;
+  color: black;
+}
+
+.login .in,
+.register .in {
+  width: 100%;
+  color: black;
+  font: normal 20px Gabriola;
+  border: thin solid gray;
+  border-radius: 3px;
+}
+
+.login .icon,
+.register .icon {
+  background-color: dimgrey;
+  padding: 10px;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.login .input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.reg-input {
+  margin-top: 5px;
+}
+
+/* navbar */
+
+.top {
+  position: absolute;
+  width: 100vw;
+  height: 13vh;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.884);
+  justify-content: center;
+  align-items: center;
+}
+
+.top * {
+  color: black;
+}
+
+.top .menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+
+.top li {
+  height: 40px;
+  display: inline-block;
+}
+
+.top #buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.top button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  background-color: inherit;
+}
+
+.top button:hover {
+  transform: scale(1.1);
+}
+
+.top button:focus {
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Home page */
+.note-page {
+  background-image: url('https://source.unsplash.com/1600x900/?nature,water,forest');
+  background-size: cover;
+  color: white;
+}
+
+.note-page .addNote {
+  margin-top: 13vh;
+  padding-top: 8vh;
+  background-color: rgba(0, 0, 0, 0.342);
+  width: 100vw;
+}
+
+.note-page .content {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.note-page .content-box {
+  background-color: rgba(0, 0, 0, 0.514);
+  height: 200px;
+  width: 200px;
+}
+
+.note-page h3 {
+  text-align: center;
+}
+
+.note-page .mid {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.note-page .search,
+.note-page .search:focus,
+.note-page .search:active {
+  border: none;
+  width: 200px;
+  font-size: 12px;
+  color: #aaa;
+  padding-bottom: 1px;
+  background-color: rgba(0, 0, 0, 0.753);
+  border-bottom: 1px solid #aaa;
+}
+
+.note-page .search::placeholder {
+  letter-spacing: 3px;
+  font-size: 8px;
+  color: #aaa;
+}
+
+.note-page .submit ,.note-page .addNoteBtn{
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.note-page .submit img {
+  border: none;
+  height: 20px;
+  background-color: inherit;
+  border-bottom: 1px solid #aaa;
+}
+
+.note-page .card-body, .addTxt{
+  margin: auto;
+  width: 400px;
+}
+
+.note-page .addTxt{
+  background-color: rgba(0, 0, 0, 0.753);
+  color: #fff;
+  word-break: break-word;
+}
+
+/* Error page */
+.error {
+  color: #ffffff;
+  background-image: url('https://source.unsplash.com/1600x900/?nature,water,forest');
+}
+
+.error section {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* About us */
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+
+
+.about-page {
+  background: url(https://source.unsplash.com/random)no-repeat;
+  background-size: cover;
+  width: 100vw;
+  background-position: center;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper {
+  margin: 10% auto 0;
+}
+
+.wrapper h1 {
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.team .team_member {
+  background: rgba(255, 255, 255, 0.89);
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;
+  position: relative;
+}
+
+.team .team_member h3 {
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team .team_member p.role {
+  color: #8e8b8b;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team .team_member .team_img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  clip-path: circle();
+}
+
+.team .team_member .team_img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
