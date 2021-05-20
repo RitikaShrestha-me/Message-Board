@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<!-- Including Home -->
+<%- include('./partials/head.ejs') %>
+
+<body id="login">
+
+    <!-- Including Navbar -->
+    <%- include('./partials/nav.ejs') %>
+    <div class="container-fluid" >
+        <div class="login">
+
+            <!-- Login Form -->
+            <div class="col-md-8 col-sm-12" id="body">
+                <form class="form-signin" action="/validateUser" method="post">
+                    <h3>Login</h3><br /><br>
+                    <label for="userName"> Your Username <span class="required">*</span></label>
+                    <div class="input-container">
+                        <i class="fa fa-user icon"></i>
+                        <input class="in form-control" name="userName" type="Text" placeholder="Username" required /><br />
+                    </div><br />
+                    <label for="password">Password <span class="required">*</span></label>
+                    <div class="input-container">
+                        <i class="fa fa-key icon"></i>
+                        <input class="in form-control" name="password" type="password" placeholder="Password" required /><br />
+                    </div><br />
+                    
+                    <!-- <a style=" color: dimgrey;" href="forgotPwd.html">Forgot Password?</a><br /> -->
+                    
+                    <!-- Button to Verify User Data and Log In -->
+                    <button class="btn" type="submit" id="loginBtn" value="Login" >Login</button><br />
+                    
+                    <!-- If no account Redirect to Register page -->
+                    <p>
+                        <span style="font-size: 12px !important; ">Don`t Have An Account?</span>
+                        <a style="color: dimgrey;" href="./register">Register</a><br />
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Including Home -->
+<%- include('./partials/head.ejs') %>
+
+<body class="note-page">
+
+    <!-- Including Navbar -->
+    <%- include('./partials/nav.ejs') %> 
+
+    <!-- Main Body to Add Note -->
+    <div class="addNote">
+
+        <!-- To search notes -->
+        <form class="mid">
+            <input class="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="submit" type="submit">Search</button>
+        </form>
+
+        <!-- Add new note -->
+        <div class="card-body">
+            <h5 class="card-title">Add a note</h5>
+            <form class="card form-addnote" action="/addNote" method="post">
+                <input class="addTxt" type="text" placeholder="Add Note Title" name="noteTitle" id="hi">
+                <input class="addTxt" type="text" placeholder="Add Note" name="noteText">
+                <button class="addNoteBtn" type="submit">Add Note</button>
+            </form>
+        </div>
+        
+        <br>
+        <hr>
+
+        <!-- New Notes are Displayed Here -->
+        <h2 class="buzzyNotes">Your BuzzyNotes:</h2><br>
+          
+        <div class="content">
+            <% if (messages.length > 0) {%>
+                <% messages.forEach(message => {%>
+                    <div class="content-box">
+                        <h3 class="title"><%= message.noteTitle %></h3>
+                        <hr><br>
+                        <p class="note"><%= message.noteText %></p>
+                    </div>
+                <% })%>
+            <% } else { %>
+                <p>There are no Notes. Pin a Note...</p>
+            <% } %>
+        </div>
+    </div>
+      
+    
+</body>
+</html>
